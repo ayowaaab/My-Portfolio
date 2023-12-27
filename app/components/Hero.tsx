@@ -14,25 +14,24 @@ const Hero = () => {
       gsap
         .timeline()
         .to("#description", {
-          text:"Hi! 👋",
-          duration: .5,
-          delay:1,
+          text: "Hi! 👋",
+          duration: 0.5,
+          delay: 1.5,
           ease: "none",
         })
         .to("#description", {
           text: "I&#39;m Ayoub — A full-stack web magician, blending my design chops with coding prowess to craft websites that are both visually stunning and technically sound.",
           duration: 10,
-          delay:.5,
+          delay: 0.5,
           ease: "none",
         })
-        // .from("#description", {})
         .from("#arrow", {
           y: -50,
-          delay:1,
+          delay: 1,
           ease: "power3.out",
           duration: 0.8,
           yoyo: true,
-          visibility:"visible",
+          visibility: "visible",
           opacity: 0,
           repeat: -1,
         });
@@ -48,13 +47,16 @@ const Hero = () => {
           size={{ initial: "3", sm: "6", md: "7", xl: "8" }}
           style={{
             lineHeight: "calc(1rem + 2vw)",
-            width: "80%",
             display: "block",
           }}
+          className="w-full md:w-10/12"
           weight={"light"}
         ></Text>
 
-        <div className="flex justify-center  mt-20 md:justify-end invisible" id="arrow">
+        <div
+          className="flex justify-center  mt-20 md:justify-end invisible"
+          id="arrow"
+        >
           <Image
             src="/Scroll-Down.png"
             height={0}
