@@ -3,19 +3,39 @@ import React, { useLayoutEffect, useRef } from "react";
 import { Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { gsap } from "gsap";
+import { TextPlugin } from "gsap/all";
+
 const Hero = () => {
+  gsap.registerPlugin(TextPlugin);
   const app = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from("#arrow", {
-        y: -50,
-        ease: "power3.out",
-        duration: 0.8,
-        yoyo: true,
-        opacity: 0,
-        repeat: -1,
-      });
+      gsap
+        .timeline()
+        .to("#description", {
+          text:"Hi! 👋",
+          duration: .5,
+          delay:1,
+          ease: "none",
+        })
+        .to("#description", {
+          text: "I&#39;m Ayoub — A full-stack web magician, blending my design chops with coding prowess to craft websites that are both visually stunning and technically sound.",
+          duration: 10,
+          delay:.5,
+          ease: "none",
+        })
+        // .from("#description", {})
+        .from("#arrow", {
+          y: -50,
+          delay:1,
+          ease: "power3.out",
+          duration: 0.8,
+          yoyo: true,
+          visibility:"visible",
+          opacity: 0,
+          repeat: -1,
+        });
     }, app);
 
     return () => ctx.revert();
@@ -24,6 +44,7 @@ const Hero = () => {
     <>
       <div ref={app}>
         <Text
+          id="description"
           size={{ initial: "3", sm: "6", md: "7", xl: "8" }}
           style={{
             lineHeight: "calc(1rem + 2vw)",
@@ -31,12 +52,9 @@ const Hero = () => {
             display: "block",
           }}
           weight={"light"}
-        >
-          I&#39;m Ayoub — A full-stack web magician, blending my design chops
-          with coding prowess to craft websites that are both visually stunning
-          and technically sound.
-        </Text>
-        <div className="flex justify-center  mt-20 md:justify-end" id="arrow">
+        ></Text>
+
+        <div className="flex justify-center  mt-20 md:justify-end invisible" id="arrow">
           <Image
             src="/Scroll-Down.png"
             height={0}
