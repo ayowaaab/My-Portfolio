@@ -18,7 +18,7 @@ const NavBar = () => {
         <Image
           src="Logo.svg"
           alt="logo"
-          className="w-32 hidden md:block"
+          className="w-28 xl:w-52 hidden md:block"
           width={0}
           height={0}
         />
@@ -30,7 +30,7 @@ const NavBar = () => {
               key={link.href}
               href={link.href}
             >
-              <Text size={{ initial: "2", lg: "3", xl: "4" }}>
+              <Text size={{ initial: "2", lg: "3", xl: "6" }}>
                 {link.label}
               </Text>
             </Link>
@@ -40,7 +40,7 @@ const NavBar = () => {
           href="#"
           className="opacity-50 hover:opacity-100 transition-colors"
         >
-          <Text className="font-light text-1">ayoub1dahmen@gmail.com</Text>
+          <Text className="font-light text-1 xl:text-[20px]">ayoub1dahmen@gmail.com</Text>
         </Link>
       </header>
     </>

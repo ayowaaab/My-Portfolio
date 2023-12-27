@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <>
       <Text
-        size={{initial:"3",lg:"7",xl:"9"}}
-        style={{ lineHeight: "calc(1rem + 25px)", width: "80%", display: "block" }}
+        size={{initial:"3",lg:"7",xl:"8"}}
+        style={{ lineHeight: "calc(1rem + 2vw)", width: "80%", display: "block" }}
         weight={"light"}
       >
         I&#39;m Ayoub — A full-stack web magician, blending my design chops with
