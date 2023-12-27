@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import "./theme-config.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ayowaaab | Portfolio",
@@ -16,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html suppressHydrationWarning lang="en">
+      <body>
         <Theme appearance="dark">{children}</Theme>
       </body>
     </html>
