@@ -10,11 +10,12 @@ const NavBar = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from("#header", {
+      gsap.timeline().from("#header", {
         y: 50,
         opacity: 0,
+        visibility: "visible",
         duration: 1,
-      });
+      }).to("#header",{visibility:"visible"});
     }, app);
 
     return () => ctx.revert();
@@ -33,7 +34,7 @@ const NavBar = () => {
     <div ref={app}>
       <header
         id="header"
-        className="flex flex-col md:flex-row justify-center md:justify-between items-center pt-10 mb-20 gap-5 "
+        className="flex flex-col md:flex-row justify-center md:justify-between items-center pt-10 mb-20 gap-5 invisible"
       >
         <Image
           priority={true}
