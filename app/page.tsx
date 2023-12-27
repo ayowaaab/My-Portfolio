@@ -1,12 +1,16 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import Cards from "./components/Cards";
 
 const page = () => {
   return (
     <>
       <NavBar />
-      <Hero />
+      <div className="h-[90vh]">
+        <Hero />
+      </div>
+      <Cards />
     </>
   );
 };
