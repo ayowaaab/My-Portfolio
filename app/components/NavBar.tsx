@@ -55,7 +55,7 @@ const NavBar = () => {
               key={link.href}
               href={link.href}
             >
-              <Text size={{ initial: "2", lg: "3", xl: "6" }}>
+              <Text size={{ initial: "2", lg: "3", xl: "6" }} className="font-medium">
                 {link.label}
               </Text>
             </Link>

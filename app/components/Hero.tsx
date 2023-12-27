@@ -49,8 +49,7 @@ const Hero = () => {
             lineHeight: "calc(1rem + 2vw)",
             display: "block",
           }}
-          className="w-full md:w-10/12"
-          weight={"light"}
+          className="w-full md:w-10/12 font-light"
         ></Text>
 
         <div
