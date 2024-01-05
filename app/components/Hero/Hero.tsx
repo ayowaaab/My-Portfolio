@@ -41,7 +41,7 @@ const Hero = () => {
   }, []);
   return (
     <>
-      <div ref={app}>
+      <div className="h-[90vh]" ref={app}>
         <Text
           id="description"
           size={{ initial: "3", sm: "6", md: "7", xl: "8" }}
