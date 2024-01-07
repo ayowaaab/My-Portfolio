@@ -27,7 +27,7 @@ const PortfolioCard = ({ technologie, linkUrl, year, picture }: Props) => {
               <div className="flex flex-col gap-0">
                 <p>
                   <strong className="uppercase text-neutral-400">
-                    technologie 
+                    technologie
                   </strong>
                   {technologie}
                 </p>
@@ -63,7 +63,7 @@ const PortfolioCard = ({ technologie, linkUrl, year, picture }: Props) => {
               <div className="flex flex-col gap-0">
                 <p>
                   <strong className="uppercase text-neutral-400">
-                    technologie 
+                    technologie
                   </strong>
                   {technologie}
                 </p>
@@ -101,17 +101,21 @@ const PortfolioCard = ({ technologie, linkUrl, year, picture }: Props) => {
               height={1000}
               className={styles.cardSideImg}
             />
-            <div>
-              <p>
-                <strong className="uppercase text-[#808080]">technologie </strong>
+            <div className="mt-5 space-y-2">
+              <p className="text-2 xl:text-5 text-center font-thin">
+                <strong className=" uppercase text-[#808080] mr-2">
+                  technologie
+                </strong>
                 {technologie}
               </p>
-              <Link href={"https://"+linkUrl}>
-                <strong className="uppercase text-[#808080]">link </strong>
-                {linkUrl}
-              </Link>
-              <p>
-                <strong className="uppercase text-[#808080]">year </strong>
+              <p className="text-2 xl:text-5 text-center font-thin">
+                <strong className=" uppercase text-[#808080] mr-2">link</strong>
+                <Link href={"https://" + linkUrl} className="underline">
+                  {linkUrl}
+                </Link>
+              </p>
+              <p className="text-2 xl:text-5 text-center font-thin">
+                <strong className=" uppercase text-[#808080] mr-2">year</strong>
                 {year}
               </p>
             </div>

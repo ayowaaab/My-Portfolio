@@ -22,19 +22,25 @@
 */
 
 .bothBlurCard {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   height: 100vh;
+  justify-content: center;
   align-items: center;
+}
+@media (min-width: 720px) {
+  .bothBlurCard {
+    display: grid;
+  }
 }
 
 .card {
   perspective: 1000px;
   height: var(--size);
-  width: calc(var(--size) * 1.3);
+  width: calc(var(--size) * 1.2);
   border-radius: 25px;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 .bothBlurCard .card:nth-child(1) {
   justify-self: end;
@@ -45,14 +51,15 @@
 .mainCard {
   position: relative;
   position: absolute;
+  width: calc(var(--size) * 1.4);
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   transition: 0.3s;
 }
 .mainCard:hover {
   cursor: pointer;
-  transform: translate(-50%, calc(-50% - 1rem)) scale(1.05);
+  transform: translate(-50%, calc(-50% - 1rem)) scale(1.1);
 }
 .mainCard .cardSide {
   transform: rotateY(0);
@@ -99,7 +106,7 @@
 
 .cardSide span:nth-child(1) {
   background: linear-gradient(to right, transparent, white);
-  height: 2px;
+  height: var(--size_of_line);
   width: 100%;
   top: 0;
   left: 0;
@@ -108,7 +115,7 @@
 }
 .cardSide span:nth-child(2) {
   background: linear-gradient(to bottom, transparent, white);
-  width: 2px;
+  width: var(--size_of_line);
   height: 100%;
   top: 0;
   right: 0;
@@ -116,7 +123,7 @@
 }
 .cardSide span:nth-child(3) {
   background: linear-gradient(to left, transparent, white);
-  height: 2px;
+  height: var(--size_of_line);
   width: 100%;
   bottom: 0;
   left: 0;
@@ -125,7 +132,7 @@
 }
 .cardSide span:nth-child(4) {
   background: linear-gradient(to top, transparent, white);
-  width: 2px;
+  width: var(--size_of_line);
   height: 100%;
   bottom: 0;
   left: 0;

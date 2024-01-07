@@ -1,5 +1,10 @@
 @font-face {
   font-family: "Geist";
+  src: url("./fonts/Geist-Mono/GeistMono-Thin.otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Geist";
   src: url("./fonts/Geist-Mono/GeistMono-Light.otf");
   font-weight: 300;
 }
@@ -9,7 +14,6 @@
   font-weight: 400;
 
 }
-
 @font-face {
   font-family: "Geist";
   src: url("./fonts/Geist-Mono/GeistMono-SemiBold.otf");

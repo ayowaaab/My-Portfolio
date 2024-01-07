@@ -4,11 +4,11 @@
 
 :root {
   --foreground-rgb: #222222;
-
   /** Portfolio Card Variables */
-  --size: clamp(200px, 22vw, 550px);
+  --size: clamp(300px, 22vw, 550px);
   --dot_color: #a2a2a2;
   --card_color: rgba(17, 23, 42, 0.95);
+  --size_of_line: 3px;
   
 }
 
@@ -17,6 +17,7 @@ body {
   color: white;
   margin: 0 auto;
   width: 80%;
+  overflow-x: hidden;
 }
 
 /*! Scroll Bar */

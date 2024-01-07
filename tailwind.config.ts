@@ -1,3 +1,4 @@
+import { Theme } from '@radix-ui/themes';
 import type { Config } from 'tailwindcss'
 import { radixThemePreset } from 'radix-themes-tw';
 
@@ -14,6 +15,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontWeight:{
+        thin:"100"
+      }
     },
   },
   plugins: [],
