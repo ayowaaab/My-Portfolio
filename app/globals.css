@@ -4,6 +4,12 @@
 
 :root {
   --foreground-rgb: #222222;
+
+  /** Portfolio Card Variables */
+  --size: clamp(200px, 22vw, 550px);
+  --dot_color: #a2a2a2;
+  --card_color: rgba(17, 23, 42, 0.95);
+  
 }
 
 body {
@@ -32,21 +38,9 @@ body {
   background: #333;
 }
 
-.lines{
+.lines {
   display: flex;
   justify-content: space-between;
   position: absolute;
   width: 100%;
-}
-
-.lines span{
-  background:linear-gradient(to bottom ,transparent,white,transparent);
-  height: 100vh;
-  width: 1px;
-  animation: bgAnimation 2s linear;
-}
-@keyframes bgAnimation {
-  0%{height: 0vh;}
-  100%{height: 100vh;}
-  
 }
