@@ -106,7 +106,7 @@ const PortfolioCard = ({ technologie, linkUrl, year, picture }: Props) => {
                 <strong className="uppercase text-[#808080]">technologie </strong>
                 {technologie}
               </p>
-              <Link href={linkUrl}>
+              <Link href={"https://"+linkUrl}>
                 <strong className="uppercase text-[#808080]">link </strong>
                 {linkUrl}
               </Link>

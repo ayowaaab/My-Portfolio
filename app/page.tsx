@@ -16,7 +16,7 @@ const page = () => {
         <PortfolioCard
           picture="/yuta.jpeg"
           technologie="ReactJS| TypeScript | Chakra-UI"
-          linkUrl="ayowaaab.github.io/AnimePage"
+          linkUrl="ayowaaab.github.io/AnimePage/"
           year="2023"
         />
       </div>
